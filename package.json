@@ -1,0 +1,16 @@
+{
+  "name": "datastructures-practice",
+  "version": "1.0.0",
+  "description": "Practice with data structures.",
+  "test": "ts-mocha",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohammed Adekunle",
+  "license": "ISC",
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "mocha": "^8.3.2",
+    "ts-mocha": "^8.0.0"
+  }
+}
