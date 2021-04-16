@@ -3,6 +3,10 @@ import LinkedListElement from './linked-list-element'
 export default class LinkedList<T> {
     private firstElement: LinkedListElement<T>|null;
 
+    constructor() {
+        this.firstElement = null;
+    }
+
     /**
      * Get the size of the linked list.
      * 
