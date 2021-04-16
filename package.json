@@ -8,6 +8,7 @@
   "author": "Mohammed Adekunle",
   "license": "ISC",
   "devDependencies": {
+    "@types/faker": "^5.5.1",
     "@types/mocha": "^8.2.0",
     "faker": "^5.5.3",
     "mocha": "^8.3.2",
