@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Practice with data structures.",
   "scripts": {
-    "test": "ts-mocha tests/*.test.ts"
+    "lint": "eslint .",
+    "test": "ts-mocha tests/*.ts"
   },
   "author": "Mohammed Adekunle",
   "license": "ISC",
@@ -14,6 +15,9 @@
   "devDependencies": {
     "@types/faker": "^5.5.1",
     "@types/mocha": "^8.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0",
     "faker": "^5.5.3",
     "mocha": "^8.3.2",
     "ts-mocha": "^8.0.0"
