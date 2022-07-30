@@ -1,4 +1,6 @@
-export default interface LinkedListElement<T> {
+interface LinkedListElement<T> {
     data: T,
-    next: LinkedListElement<T>|null
+    next: LinkedListElement<T>|null,
 }
+
+export default LinkedListElement;

@@ -1,7 +1,7 @@
-import LinkedListElement from './linked-list-element'
+import LinkedListElement from "./linked-list-element";
 
 export default class LinkedList<T> {
-    private firstElement: LinkedListElement<T>|null;
+    private firstElement: LinkedListElement<T> | null;
 
     constructor() {
         this.firstElement = null;
@@ -13,18 +13,12 @@ export default class LinkedList<T> {
      * @returns Number of items in the list.
      */
     public get size(): number {
-        let length = 0;
-        if (this.firstElement == null) return length;
+        if (this.firstElement == null) return 0;
 
+        let length = 1;
         let currentElement = this.firstElement;
-        while (true) {
-            // Increment the length
+        while (currentElement.next) {
             length++;
-
-            // End of list
-            if (currentElement.next == null) break;
-
-            // Continue incrementing
             currentElement = currentElement.next;
         }
 
@@ -37,28 +31,22 @@ export default class LinkedList<T> {
      * @param item The item to be added to the linked list.
      * @returns True on success, False on failure.
      */
-    public push(item: T): boolean {
-        let newElement = {data: item, next: null};
+    public push(data: T) {
+        const newElement: LinkedListElement<T> = { data, next: null };
 
         // If the linked list is empty
-        if (this.firstElement == null) {
+        if (!this.firstElement) {
             this.firstElement = newElement;
-            return true;
+            return;
         }
 
         // Traverse the list to the last element
-        // And append the new element to the end of the list
         let currentElement = this.firstElement;
-        while (true) {
-            if (currentElement.next != null) {
-                currentElement = currentElement.next;
-                continue;
-            }
-
-            currentElement.next = newElement;
-            break;
+        while (currentElement.next) {
+            currentElement = currentElement.next;
         }
 
-        return true;
+        // And append the new element to the end of the list
+        currentElement.next = newElement;
     }
 }
