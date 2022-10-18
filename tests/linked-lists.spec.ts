@@ -2,7 +2,6 @@ import assert from "assert";
 import LinkedList from "../src/linked-lists/linked-list";
 import faker from "faker";
 
-
 describe("Linked Lists", function() {
     it("Calculates size properly.", function() {
         const list = new LinkedList<string>();
